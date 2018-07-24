@@ -32,3 +32,5 @@ COPY --from=composer:1.6 /usr/bin/composer /usr/bin/composer
 COPY docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
+
+CMD ["php-fpm"]
